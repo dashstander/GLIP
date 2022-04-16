@@ -1,0 +1,39 @@
+# Configuration for Cog ⚙
+# Reference: https://github.com/replicate/cog/blob/main/docs/yaml.md
+
+build:
+  # set to true if your model requires a GPU
+  gpu: true
+
+  # a list of ubuntu apt packages to install
+  system_packages:
+    - "libgl1-mesa-glx"
+    - "libglib2.0-0"
+
+  # python version in the form '3.8' or '3.8.12'
+  python_version: "3.8"
+
+  # a list of packages in the format <package-name>==<version>
+  python_packages:
+    - "einops==0.4.1"
+    - "ftfy==6.1.1"
+    - "Pillow==9.1.0"
+    - "prettytable==3.2.0"
+    - "pycocotools==2.0.4"
+    - "PyYAML==6.0"
+    - "qd==0.8.9"
+    - "regex==2022.3.15"
+    - "scipy==1.8.0"
+    - "setuptools==62.1.0"
+    - "tensorboardX==2.5"
+    - "timm==0.5.4"
+    - "torch==1.11.0"
+    - "torchvision==0.12.0"
+    - "tqdm==4.64.0"
+    - "transformers==4.18.0"
+    - "yacs==0.1.8"
+
+  # commands run after the environment is setup
+  run:
+    - "python setup.py build develop --user"
+
