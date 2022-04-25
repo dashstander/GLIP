@@ -196,6 +196,7 @@ class GeneralizedVLRCNN(nn.Module):
 
         # language embedding
         language_dict_features = {}
+        # TODO: Why is there no "embedded" key in language_dict_features ?
         if captions is not None:
             #print(captions[0])
             tokenized = self.tokenizer.batch_encode_plus(captions,
